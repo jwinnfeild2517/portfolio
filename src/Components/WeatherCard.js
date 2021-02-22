@@ -26,7 +26,7 @@ export default class Weather extends React.Component {
     async componentDidMount() {
         if ('geolocation' in navigator) {
             navigator.geolocation.getCurrentPosition(async (position) => {
-                const url = `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&APPID=3b3f010dc75065101a99a021a52b75b8`
+                const url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&APPID=${process.env.REACT_APP_WEATHER_API_KEY}`
                 const response = await fetch(url)
                 const result = await response.json()
                 this.setState({
