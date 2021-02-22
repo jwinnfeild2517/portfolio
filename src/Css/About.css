@@ -1,0 +1,56 @@
+.about {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.about__content-header, .about__contact-header {
+    font-size: 2em;
+    margin: auto;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #2C2D34;
+    width: fit-content;
+}
+
+.about__content-header::after, .about__contact-header::after {
+    content: "";
+    width: 41%;
+    padding-top: 12px;
+    border-bottom: 5px solid;
+    border-color: var(--tertiary-color);
+    display: block;
+    margin: auto;
+}
+
+.about__content, .about__contact {
+    flex: 1 300px;
+    padding: 1em;
+}
+
+.about__content {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.about__content-header {
+    color: white;
+}
+
+.about__content-bio, .about__contact{
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+.about__contact {
+    background-color: white;
+}
+
+@media only screen and (min-width: 769px) {
+    .about {
+        margin-top: 7em;
+        margin-bottom: 4em;
+    }
+}

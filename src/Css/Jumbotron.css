@@ -1,0 +1,39 @@
+.jumbotron {
+    height: 145px;
+    background-image: url(https://images.pexels.com/photos/910616/pexels-photo-910616.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-position: 143% 52%;
+    background-color: var(--primary-color);
+    display: flex;
+}
+
+.jumbotron > img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    /* clip-path: polygon(0 0%, 0% 100%, 100% 100%); */
+}
+
+@media only screen and (min-width: 769px) {
+    .jumbotron {
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 250px;
+        display: flex;
+    }
+
+    .jumbotron > video {
+        min-height: 100%;
+        min-width: 80%;
+        object-fit: cover;
+        clip-path: none;
+    }
+
+    .jumbotron__video-guard-rail {
+        height: 40%;
+        border: 5px solid #AC6C00;
+    }
+}
