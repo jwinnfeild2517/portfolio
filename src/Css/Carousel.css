@@ -2,8 +2,8 @@
     padding: 2em;
     max-width: 500px;
     margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .carousel__header {
@@ -13,6 +13,16 @@
     letter-spacing: 0.05em;
     color: #2C2D34;
     width: fit-content;
+}
+
+.carousel__header::after{
+    content: "";
+    width: 41%;
+    padding-top: 12px;
+    border-bottom: 5px solid;
+    border-color: var(--tertiary-color);
+    display: block;
+    margin: auto;
 }
 
 .slick-prev:before,
@@ -25,11 +35,11 @@
 
 
 .carouselCard {
-    margin: 2em .5em;
+    margin: 1em .5em;
+    margin-top: 3em;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    width: 315px;
     height: 302px;
 }
 
