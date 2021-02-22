@@ -3,6 +3,7 @@ import React from "react";
 
 const image1 = 'https://images.pexels.com/photos/4553657/pexels-photo-4553657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 // const image2 = 'https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
 export default class Weather extends React.Component {
 
@@ -26,7 +27,7 @@ export default class Weather extends React.Component {
     async componentDidMount() {
         if ('geolocation' in navigator) {
             navigator.geolocation.getCurrentPosition(async (position) => {
-                const url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&APPID=${process.env.REACT_APP_WEATHER_API_KEY}`
+                const url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&APPID=${API_KEY}`
                 const response = await fetch(url)
                 const result = await response.json()
                 this.setState({
