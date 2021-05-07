@@ -12,27 +12,30 @@
 
 .footer__github-button {
     background-color: black;
-    color: white;
-    width: 13em;
+    width: 10em;
     height: 3em;
     z-index: 1;
     font-family: inherit;
     margin: 1em;
-}
-
-.footer__github-button a {
     text-decoration: none;
     color: white;
     font-size: 1.3em;
-    
+    text-align: center;
+    padding: 14px;
 }
 
+.footer__github-button:hover {
+    border: 1px solid var(--tertiary-color);
+    cursor: pointer;
+}
 
 .footer__copyright {
     z-index: 1;
     color: white;
     font-weight: 700;
     font-size: 1.2em;
+    text-align: center;
+    line-height: 1.4;
 }
 
 .footer__color-overlay {

@@ -35,4 +35,7 @@ body {
 @import "./Jumbotron.css";
 @import "./Footer.css";
 @import "./About.css";
-@import "./Carousel.css"
+@import "./Carousel.css";
+@import "./BookSearchCard.css";
+@import "./SearchPage.css";
+@import "./LandingPage.css"

@@ -2,6 +2,7 @@ import BEMHelper from "react-bem-helper";
 import CarouselCard from "./CarouselCard";
 import Slider from "react-slick";
 import Weather from "./WeatherCard"
+import BookSearch from "./BookSearch"
 
 const Carousel = () => {
     // allows us to generate class names using nav
@@ -52,6 +53,7 @@ const Carousel = () => {
             </p>
             <Slider {...classes('cards-container')} {...settings}>
                 <Weather />
+                <BookSearch />
                 <CarouselCard />
                 <CarouselCard />
                 <CarouselCard />

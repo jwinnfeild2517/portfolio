@@ -10,7 +10,7 @@ const Footer = () => {
                 &copy; Copyright <span id="copyright-date"></span>, 
                 Jenner Thomas. All Rights Reserved.
             </p>
-            <button {...classes('github-button')}><a href="https://github.com/jwinnfeild2517">Github</a></button>
+            <a {...classes('github-button')} href="https://github.com/jwinnfeild2517">Github</a>
         </div>
     )
 }

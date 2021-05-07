@@ -1,0 +1,29 @@
+.book-search {
+    background-color: #fefefa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-search h3 {
+    margin: 0;
+}
+
+.book-search a {
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 11px 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #AC6C00;
+    background-color: #efefef;
+    font-weight: 600;
+}
+
+.book-search a:hover {
+    background-color: black;
+    color: white;
+}

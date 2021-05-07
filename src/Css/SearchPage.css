@@ -1,0 +1,124 @@
+.SearchContainer {
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/3842751/pexels-photo-3842751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940),
+    url(https://images.pexels.com/photos/2249964/pexels-photo-2249964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-color: #FBFBFB;
+    background-position: bottom left 1em, bottom 2em right 1em;
+    background-repeat: no-repeat;
+    background-size: 50% 60%, 50% 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.searchBookForm {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1em
+}
+
+.searchBookForm > .textInput {
+    width: 50em;
+    background-color: #ffffff;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: -2px 9px 21px 4px rgba(0,0,0,0.10);
+    border-radius: 5px;
+    animation-name: loadsearch;
+    animation-duration: 3s;
+}
+
+
+@keyframes loadsearch {
+    from {width: 0em}
+    to {width: 50em}
+}
+
+.textInput > .searchField {
+    flex: 1;
+    height: 3em;
+    border: none;
+}
+
+.textInput > .mainPageButton {
+    height: 3em;
+    width: 8em;
+    background-color: #1595EC;
+    border: none;
+    color: #ffffff;
+}
+
+
+
+.searchBookForm > label {
+    font-size: 2em;
+    margin: 1.5em;
+}
+
+.searchBookForm > label > h1 > span {
+    color: #1595EC;
+}
+
+
+
+.bookList {
+    display: none;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.bookTile {
+    margin: 1em;
+    width: 160px;
+}
+
+.bookTile > img {
+    width: 152px;
+    height: 191px;
+}
+
+.showCard {
+    height: 18em;
+    width: 15em;
+    position: absolute;
+    right: 5em;
+    top: 25%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: -2px 9px 21px 4px rgba(0,0,0,0.10);
+    overflow: hidden;
+}
+
+.showCard.right-card {
+    animation-name: showCardDropRight;
+    animation-duration: 3s;
+}
+
+.showCard.left-card {
+    animation-name: showCardDropLeft;
+    animation-duration: 3s;
+}
+
+.showCard > img {
+    width: 15em;
+}
+
+.showCard > .show_description {
+    padding: 1em;
+}
+
+@keyframes showCardDropRight {
+    from {top: 0}
+    to {top: 25%}
+}
+
+@keyframes showCardDropLeft {
+    from {top: 0}
+    to {top: 50%}
+}
