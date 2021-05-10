@@ -38,4 +38,6 @@ body {
 @import "./Carousel.css";
 @import "./BookSearchCard.css";
 @import "./SearchPage.css";
-@import "./LandingPage.css"
+@import "./LandingPage.css";
+@import "./ProjectBrowse.css";
+@import "./MagazineCutout.css";

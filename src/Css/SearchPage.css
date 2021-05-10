@@ -1,5 +1,5 @@
 .SearchContainer {
-    min-height: 100vh;
+    min-height: 90vh;
     background-image: url(https://images.pexels.com/photos/3842751/pexels-photo-3842751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940),
     url(https://images.pexels.com/photos/2249964/pexels-photo-2249964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-color: #FBFBFB;
@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
 
 }
 
@@ -68,14 +69,35 @@
 .bookList {
     display: none;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
+    height: 80%;
     margin: auto;
     flex-wrap: wrap;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    background-color: #000000d1;
+    padding: 7em;
+    border-radius: 22px;
+}
+
+.bookList h1.results-close {
+    position: absolute;
+    right: 36px;
+    top: 20px;
+    color: white;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.bookList h1.results-close:hover {
+    font-size: 3.1em;
 }
 
 .bookTile {
     margin: 1em;
     width: 160px;
+    color: white;
 }
 
 .bookTile > img {
@@ -121,4 +143,50 @@
 @keyframes showCardDropLeft {
     from {top: 0}
     to {top: 50%}
+}
+
+
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+
+  }
+
+@media screen and (max-width: 767px) {
+/* start of medium tablet styles */
+
+
+}
+
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+    .SearchContainer {
+        background-image: url(https://images.pexels.com/photos/3842751/pexels-photo-3842751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-position: top;
+        background-size: 100% 50%;
+    }
+
+    .searchBookForm {
+        flex-direction: column-reverse;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+    }
+
+    .searchBookForm > label {
+        font-size: 1em;
+    }
+
+    .searchBookForm > .textInput {
+        width: 20em;
+    }
+
+    .showCard {
+        display: none;
+    }
+
+    @keyframes loadsearch {
+        from {width: 0em}
+        to {width: 20em}
+    }
 }

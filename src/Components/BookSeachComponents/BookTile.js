@@ -15,7 +15,7 @@ export default class BookTile extends Component {
           <strong>Average Rating: </strong> {this.props.rating}
         </p>
         <button>
-          <a href={this.props.link}>Preview</a>
+          <a href={this.props.link} target="_blank" rel="noreferrer">Preview</a>
         </button>
       </div>
     );

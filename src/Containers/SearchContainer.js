@@ -6,11 +6,19 @@ export default class SearchContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
+      resultsContainerDisplay: false
     };
   }
 
+  handleClick = () => {
+    this.setState(prevState => ({
+      resultsContainerDisplay: !prevState.resultsContainerDisplay
+    }))
+  }
+
   handleSubmit = formpayLoad => {
+    this.handleClick()
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${formpayLoad}`)
       .then(response => {
         if (response.ok) {
@@ -32,6 +40,7 @@ export default class SearchContainer extends Component {
   render() {
     let bookList = [];
     if (this.state.books != null) {
+      // eslint-disable-next-line
       bookList = this.state.books.map(book => {
         let authors = "";
         let image =
@@ -70,20 +79,20 @@ export default class SearchContainer extends Component {
       <div className="SearchContainer">
         <SearchForm handleSubmit={this.handleSubmit} />
         <div className="showCard right-card">
-          <img src="https://images.pexels.com/photos/335253/pexels-photo-335253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></img>
+          <img src="https://images.pexels.com/photos/335253/pexels-photo-335253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="featured-book"></img>
           <div className="show_description">
             <h4>48 Laws Of Power</h4>
             <p>By: Rollo Tommasi</p>
           </div>
         </div>
         <div className="showCard left-card" style={{top: "50%", left: "1em"}}>
-          <img src="https://images.pexels.com/photos/335253/pexels-photo-335253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></img>
+          <img src="https://images.pexels.com/photos/335253/pexels-photo-335253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="featured-book"></img>
           <div className="show_description">
             <h4>Life of Oprah</h4>
             <p>By: Oprah Winfrey</p>
           </div>
         </div>
-        <div className="bookList">{bookList}</div>
+        <div className="bookList" style={this.state.resultsContainerDisplay ? {display: 'flex'} : {display: 'none'}}><h1 className="results-close" onClick={this.handleClick}>X</h1>{bookList}</div>
       </div>
     );
   }

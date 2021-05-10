@@ -1,5 +1,6 @@
 import React from 'react';
 import BEMHelper from "react-bem-helper";
+import { Link } from "react-router-dom";
 
 export default class Navigation extends React.Component {
     state = {
@@ -11,7 +12,7 @@ export default class Navigation extends React.Component {
 
     handleClick = () => {
         this.setState(prevState => ({
-            menuOpen: !prevState.menuOpen 
+            menuOpen: !prevState.menuOpen
         }))
     }
 
@@ -29,12 +30,14 @@ export default class Navigation extends React.Component {
                 </div>
                 <div {...this.classes('menu-overlay')} style={overlayPosition}>
                     <button className="menu-trigger fas fa-times" onClick={this.handleClick}>
-                        
+
                     </button>
                     <ul {...this.classes('menu-items')}>
-                        <li {...this.classes('menu-link')}><a href="google.com">About</a></li>
-                        <li {...this.classes('menu-link')}><a href="google.com">Projects</a></li>
-                        <li {...this.classes('menu-link')}><a href="google.com">Contact</a></li>
+                        <li {...this.classes('menu-link')}>
+                            <Link to="/" onClick={this.handleClick}>Home</Link>
+                        </li>
+                        <li {...this.classes('menu-link')}><Link to="projects" onClick={this.handleClick}>Projects</Link></li>
+                        <li {...this.classes('menu-link')}><Link to="about" onClick={this.handleClick}>About</Link></li>
                     </ul>
                 </div>
             </React.Fragment>

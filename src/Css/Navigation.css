@@ -6,8 +6,11 @@
     justify-content: space-around;
     width: 90%;
     margin: auto;
+    margin-top: 1em;
+    min-height: 10vh;
+
 }
-  
+
 .nav__brand-name {
     flex: 1;
     font-family: 'Georgia';
@@ -45,7 +48,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--primary-color); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
   padding-top: 11em;
   justify-content: center;

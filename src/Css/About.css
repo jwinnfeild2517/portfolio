@@ -1,56 +1,93 @@
 .about {
-    display: flex;
-    width: 80%;
-    flex-wrap: wrap;
+    height: 90vh;
     margin: auto;
-    margin-bottom: 3em;
+    background: white;
+    background-image: url(https://images.pexels.com/photos/4085055/pexels-photo-4085055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
 }
 
-.about__content-header, .about__contact-header {
-    font-size: 2em;
-    margin: auto;
+.about__jumbo {
+    height: 30%;
+    width: 100%;
+    background: black;
+    position: relative;
+}
+
+.about__jumbo h3 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 3em;
+    font-size: 4em;
+}
+
+.about__jumbo h1 {
+    font-size: 26em;
+    bottom: -1.02em;
+    opacity: 0.1;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #2C2D34;
-    width: fit-content;
+    left: 0;
+    position: absolute;
+    color: ghostwhite;
 }
 
-.about__content-header::after, .about__contact-header::after {
-    content: "";
-    width: 41%;
-    padding-top: 12px;
-    border-bottom: 5px solid;
-    border-color: var(--tertiary-color);
-    display: block;
-    margin: auto;
+.about__personal {
+    padding: 1em 35em;
+    display: flex;
+    justify-content: center;
+    margin-top:  2em;
+    align-items: center;
 }
 
-.about__content, .about__contact {
-    flex: 1 300px;
-    padding: 1em;
-}
-
-.about__content {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-.about__content-header {
-    color: white;
-}
-
-.about__content-bio, .about__contact{
-    font-size: 15px;
-    line-height: 1.6em;
-}
-
-.about__contact {
+.about__bio {
+    padding: 2em;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    font-size: 1em;
     background-color: white;
 }
 
-@media only screen and (min-width: 769px) {
-    .about {
-        margin-top: 7em;
-        margin-bottom: 4em;
-    }
+.about__profile-pic {
+    width: 24em;
+    height: 20em;
+    box-shadow: 5px 5px 15px 5px #00000059;
+    border-radius: 5px;
 }
+
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+}
+
+@media screen and (max-width: 767px) {
+/* start of medium tablet styles */
+}
+
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    .about__bio {
+        padding: 1em;
+    }
+
+    .about__profile-pic {
+        width: 100%;
+    }
+
+    .about__personal {
+        padding: 0;
+        flex-direction: column;
+    }
+
+
+    .about__jumbo h1 {
+        font-size: 100px;
+        bottom: -69px;
+    }
+
+    .about__jumbo h3 {
+        left: 1em;
+        font-size: 2em;
+    }
+
+}
+
