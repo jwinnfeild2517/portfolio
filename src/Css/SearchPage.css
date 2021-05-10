@@ -46,16 +46,13 @@
     font-size: 16px;
 }
 
-input[type=submit] .mainPageButton {
+.textInput > .mainPageButton {
     height: 3em;
     width: 8em;
     background-color: #1595EC;
     border: none;
     color: #ffffff;
-    border-radius: 0px;
 }
-
-
 
 .searchBookForm > label {
     font-size: 2em;
