@@ -43,14 +43,16 @@
     flex: 1;
     height: 3em;
     border: none;
+    font-size: 16px;
 }
 
-.textInput > .mainPageButton {
+input[type=submit] .mainPageButton {
     height: 3em;
     width: 8em;
     background-color: #1595EC;
     border: none;
     color: #ffffff;
+    border-radius: 0px;
 }
 
 
