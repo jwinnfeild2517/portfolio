@@ -1,4 +1,5 @@
 import BEMHelper from "react-bem-helper";
+import picture from '../Assets/images/IMG_2426.jpg'
 
 const About = () => {
 
@@ -8,7 +9,7 @@ const About = () => {
         <div {...classes()}>
             <div {...classes("jumbo")}><h3>About Me</h3><h1>About</h1></div>
             <div {...classes('personal')}>
-                <img {...classes('profile-pic')} src="https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="profile"></img>
+                <img {...classes('profile-pic')} src={picture} alt="profile"></img>
                 <div {...classes('bio')}>
 
                     <p>
