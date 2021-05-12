@@ -40,7 +40,7 @@ export default class SearchForm extends Component {
             className="searchField"
             placeholder="Enter book name"
           />
-          <input type="submit" className="mainPageButton" id="SubmitButton" value="Search" />
+          <button type="submit" className="mainPageButton">Submit</button>
         </div>
       </form>
     );
