@@ -18,15 +18,16 @@ const ProjectsBrowse = () => {
                 <img src={magcollage} alt="project tile"></img>
                 <h3 {...classes('grid-item-name')}>Digital Collage</h3>
             </Link>
-            <div {...classes('items item-2')}>
+            <a href="https://project-suggest.herokuapp.com/" {...classes('items item-2')}>
                 <img src={image3} alt="project tile"></img>
-            </div>
-            <div {...classes('items item-4')}>
-
-            </div>
-            <div {...classes('items item-5')}>
-
-            </div>
+                <h3 {...classes('grid-item-name')}>Project Suggestions</h3>
+            </a>
+            <a href="https://github.com/jwinnfeild2517/bitcoin-price-notifier"{...classes('items item-4')}>
+                <h3 {...classes('grid-item-name')}>BC Price</h3>
+            </a>
+            <a href="https://github.com/jwinnfeild2517/Trace_Weight" {...classes('items item-5')}>
+                <h3 {...classes('grid-item-name')}>Trace Weight</h3>
+            </a>
             <div {...classes('items item-6')}>
 
             </div>

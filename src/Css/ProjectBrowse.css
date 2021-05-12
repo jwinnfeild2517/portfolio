@@ -1,3 +1,8 @@
+a:hover {
+  cursor: pointer;
+}
+
+
 .project {
   background-color: white;
   width: 95%;
