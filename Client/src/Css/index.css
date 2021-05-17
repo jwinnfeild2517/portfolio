@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #EEEEEE;
+  --secondary-color: #2C2D34;
+  --tertiary-color: #AC6C00;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  /* width: 100%; */
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: var(--primary-color);
+  flex: 1;
+}
+
+@media only screen and (min-width: 769px) {
+  .wrapper {
+      margin: auto;
+      width: 95%;
+  }
+}
+
+@import "./Navigation.css";
+@import "./About.css";
+@import "./BookSearchCard.css";
+@import "./SearchPage.css";
+@import "./LandingPage.css";
+@import "./ProjectBrowse.css";
+@import "./MagazineCutout.css";

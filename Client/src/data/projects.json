@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Book Search",
+    "link": "search",
+    "image": "booksearch"
+  },
+  {
+    "name": "Digital Collage",
+    "link": "collage",
+    "image": "digitalcollage"
+  },
+  {
+    "name": "Project Suggestions",
+    "link": "https://project-suggest.herokuapp.com/",
+    "image": "projectsuggestions"
+  },
+  {
+    "name": "BC Price",
+    "link": "google.com",
+    "image": ""
+  }
+]
