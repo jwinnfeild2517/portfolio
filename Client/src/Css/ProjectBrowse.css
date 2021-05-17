@@ -129,6 +129,10 @@ a:hover {
 .weather_info .info {
   width: 33.33%;
   text-align: center;
+  height: 100%;
+  border-right: 1px solid;
+  margin: 0;
+  padding: 10px;
 }
 
 .weather_info .info_summary {
