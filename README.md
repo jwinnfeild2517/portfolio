@@ -1,6 +1,6 @@
 # Jenner IO with MERN
 
-Jenner IO is personal project platform with built in apps or links to outside apps. Build with with a MERN stack
+Jenner IO is my personal project platform with built in apps or links to outside apps. Build with with a MERN stack
 
 ## Installation and set up
 
