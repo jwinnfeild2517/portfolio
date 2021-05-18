@@ -23,7 +23,6 @@ app.get('/api', (req, res) => {
   res.json(data);
 })
 
-
 //verify application is in heroku and then serve the build folder
 app.use(express.static(path.join(__dirname, './Client/build')))
 
