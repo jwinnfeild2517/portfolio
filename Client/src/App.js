@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Navigation />
       <Router>
+        <Navigation />
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/projects" component={ProjectsBrowse} />
