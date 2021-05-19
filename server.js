@@ -16,6 +16,7 @@ mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true })
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors())
 const PORT = process.env.PORT || 5000;
 
 // logs incomming requests
@@ -36,7 +37,7 @@ app.get('/api', (req, res) => {
 app.use(express.static(path.join(__dirname, './client/build')))
 
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '"./client/build", "index.html"'))
+    res.sendFile(path.join(__dirname, './client/build', 'index.html'))
 })
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
