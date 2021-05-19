@@ -13,7 +13,7 @@
     "start": "node server.js",
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' -c 'blue,green' \"nodemon server.js\" \"npm run client\"",
-    "heroku-postbuild": "cd Client && npm install && npm run build"
+    "heroku-postbuild": "cd Client && npm install && npm run build && npm start"
   },
   "repository": {
     "type": "git",
