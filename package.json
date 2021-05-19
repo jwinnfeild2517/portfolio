@@ -5,14 +5,14 @@
   "main": "server.js",
   "engines": {
     "node": "14.x",
-    "npm": "7.11.2"
+    "npm": "6.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' -c 'blue,green' \"nodemon server.js\" \"npm run client\"",
-    "heroku-postbuild": "echo $PWD && cd client && npm install && npm run build"
+    "heroku-postbuild": "echo pwd && && npm install && npm run build"
   },
   "repository": {
     "type": "git",
