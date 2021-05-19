@@ -4,7 +4,7 @@ const path = require('path')
 
 // here we create an instance of the express module and assign it to app
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
 // logs incomming requests
 app.use(morgan('tiny'));
@@ -24,10 +24,10 @@ app.get('/api', (req, res) => {
 })
 
 //verify application is in heroku and then serve the build folder
-app.use(express.static(path.join(__dirname, './client/build')))
+app.use(express.static(path.join(__dirname, '/client/build')))
 
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build/index.html'))
+    res.sendFile(path.join(__dirname, '/client/build/index.html'))
 })
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
