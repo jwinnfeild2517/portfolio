@@ -34,10 +34,10 @@ app.get('/api', (req, res) => {
 })
 
 //verify application is in heroku and then serve the build folder
-app.use(express.static(path.join(__dirname, './client/build')))
-
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build', 'index.html'))
-})
+app.use(express.static(path.resolve(__dirname, './client/build')));
+// Step 2:
+app.get("/*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, './client/build", "index.html'));
+});
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
