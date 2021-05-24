@@ -2,21 +2,25 @@
   {
     "name": "Book Search",
     "link": "search",
-    "image": "booksearch"
+    "image": "booksearch",
+    "external_link": false
   },
   {
     "name": "Digital Collage",
     "link": "collage",
-    "image": "digitalcollage"
+    "image": "digitalcollage",
+    "external_link": false
   },
   {
     "name": "Project Suggestions",
     "link": "https://project-suggest.herokuapp.com/",
-    "image": "projectsuggestions"
+    "image": "projectsuggestions",
+    "external_link": true
   },
   {
     "name": "BC Price",
     "link": "google.com",
-    "image": ""
+    "image": "",
+    "external_link": true
   }
 ]

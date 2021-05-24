@@ -1,48 +1,38 @@
-import React, { Component } from "react";
+import React, {useState} from "react";
 
-export default class SearchForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userSearch: null,
-      error: null
-    };
-  }
+const SearchForm = (props) => {
 
-  handleInputChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
+  const [searchQuery, setSearchQuery] = useState('')
+  const [error, setError] = useState('')
 
-  SubmitForm = event => {
-    event.preventDefault();
-    if (this.state.userSearch == null) {
-      this.setState({ error: "Please enter a book or author to search" });
+  const SubmitForm = (e) => {
+    e.preventDefault();
+    e.currentTarget.reset()
+    if (error === "") {
+      setError("Please enter a book or author to search");
     } else {
-      this.props.handleSubmit(this.state.userSearch);
+      props.handleSubmit(searchQuery);
     }
   };
-
-  render() {
-    return (
-      <form className="searchBookForm" onSubmit={this.SubmitForm}>
-        <label>
-          <h1>What do you<br></br><span>want to read?</span></h1>
-        </label>
-        <br />
-        <div className="textInput">
-          <input
-            type="text"
-            onChange={this.handleInputChange}
-            id="searchField"
-            name="userSearch"
-            className="searchField"
-            placeholder="Enter book name"
-          />
-          <button type="submit" className="mainPageButton">Submit</button>
-        </div>
-      </form>
-    );
-  }
+  return (
+    <form className="searchBookForm" onSubmit={SubmitForm}>
+      <label>
+        <h1>What do you<br></br><span>want to read?</span></h1>
+      </label>
+      <br />
+      <div className="textInput">
+        <input
+          type="text"
+          onChange={(e) => setSearchQuery(e.target.value)}
+          id="searchField"
+          name="userSearch"
+          className="searchField"
+          placeholder="Enter book name"
+        />
+        <button type="submit" className="mainPageButton">Submit</button>
+      </div>
+    </form>
+  );
 }
+
+export default SearchForm

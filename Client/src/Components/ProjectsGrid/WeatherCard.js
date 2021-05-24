@@ -1,6 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSun } from '@fortawesome/free-solid-svg-icons'
 
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -57,7 +57,6 @@ export default class Weather extends React.Component {
             weatherData =
                 <React.Fragment>
                     <h2 className="info">
-                        <span class="material-icons-outlined"></span>
                         {this.state.data.city}
                     </h2>
                     <h3 className="info info_summary">{this.state.data.summary}</h3>

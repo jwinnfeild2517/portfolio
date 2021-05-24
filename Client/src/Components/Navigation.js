@@ -1,46 +1,40 @@
-import React from 'react';
+import React, {useState}from 'react';
 import BEMHelper from "react-bem-helper";
 import { Link } from "react-router-dom";
 
-export default class Navigation extends React.Component {
-    state = {
-        menuOpen: false
-    }
-
+const Navigation = () => {
     // allows us to generate class names using nav
-    classes = new BEMHelper('nav');
-
-    handleClick = () => {
-        this.setState(prevState => ({
-            menuOpen: !prevState.menuOpen
-        }))
-    }
-
-    render() {
-        // change the menu top position property based on state
-        const overlayPosition = this.state.menuOpen ? {top: '0'} : {top: '-100em'}
-        return(
-            <React.Fragment>
-                <div {...this.classes()}>
-                    <div {...this.classes('brand-name')}>
-                        <p>J E N N E R</p>
-                        <p>T H O M A S</p>
-                    </div>
-                    <button className="menu-trigger fas fa-bars" onClick={this.handleClick}></button>
+    const classes = new BEMHelper('nav');
+    // set navigation hook
+    const [isOpen, setIsOpen] = useState(false)
+    // change navigation state
+    const handleClick = () => setIsOpen(!isOpen)
+    // change the menu top position property based on state
+    const overlayPosition = isOpen ? {top: '0'} : {top: '-100em'}
+    return(
+        // allows to generate elements without wrapping them in a container first
+        <React.Fragment>
+            <div {...classes()}>
+                <div {...classes('brand-name')}>
+                    <p>J E N N E R</p>
+                    <p>T H O M A S</p>
                 </div>
-                <div {...this.classes('menu-overlay')} style={overlayPosition}>
-                    <button className="menu-trigger fas fa-times" onClick={this.handleClick}>
+                <button className="menu-trigger fas fa-bars" onClick={handleClick}></button>
+            </div>
+            <div {...classes('menu-overlay')} style={overlayPosition}>
+                <button className="menu-trigger fas fa-times" onClick={handleClick}>
 
-                    </button>
-                    <ul {...this.classes('menu-items')}>
-                        <li {...this.classes('menu-link')}>
-                            <Link to="/" onClick={this.handleClick}>Home</Link>
-                        </li>
-                        <li {...this.classes('menu-link')}><Link to="projects" onClick={this.handleClick}>Projects</Link></li>
-                        <li {...this.classes('menu-link')}><Link to="about" onClick={this.handleClick}>About</Link></li>
-                    </ul>
-                </div>
-            </React.Fragment>
-        )
-    }
+                </button>
+                <ul {...classes('menu-items')}>
+                    <li {...classes('menu-link')}>
+                        <Link to="/" onClick={handleClick}>Home</Link>
+                    </li>
+                    <li {...classes('menu-link')}><Link to="projects" onClick={handleClick}>Projects</Link></li>
+                    <li {...classes('menu-link')}><Link to="about" onClick={handleClick}>About</Link></li>
+                </ul>
+            </div>
+        </React.Fragment>
+    )
 }
+
+export default Navigation
