@@ -18,8 +18,14 @@
     "external_link": true
   },
   {
-    "name": "BC Price",
-    "link": "google.com",
+    "name": "Bitcoin Price",
+    "link": "https://github.com/jwinnfeild2517/bitcoin-price-notifier",
+    "image": "",
+    "external_link": true
+  },
+  {
+    "name": "Hogwarts Directory",
+    "link": "https://hogwarts-directory.herokuapp.com/",
     "image": "",
     "external_link": true
   }
