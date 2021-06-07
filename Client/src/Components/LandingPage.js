@@ -13,7 +13,7 @@ const LandingPage = () => {
     return(
         <div {...classes()}>
             <div {...classes('cards')}>
-                <Link to="projects" {...classes('projects-link')} style={{backgroundColor: cardColor}}>
+                <Link data-testid="projectsBrowseLink-card" to="projects" {...classes('projects-link')} style={{backgroundColor: cardColor}}>
                         <p {...classes('content-header')}>
                             Projects
                         </p>
@@ -21,7 +21,7 @@ const LandingPage = () => {
                             path="fill=black"
                         />
                 </Link>
-                <div {...classes('contact-card')}>
+                <div data-testid="contactInfo-card" {...classes('contact-card')}>
                     <div {...classes('person-info')}>
                         <p {...classes('contact-name')}>Jenner Thomas</p>
                         <p {...classes('contact-position')}>QA and Developer</p>
@@ -29,8 +29,8 @@ const LandingPage = () => {
                     <div {...classes('contact-info')}>
                         <p {...classes('contact-content')}>jenner.e.thomas@gmail.com</p>
                         <div {...classes('socials')}>
-                            <a href="https://www.linkedin.com/in/jenner-thomas"><FontAwesomeIcon {...classes('social-icons linkedin')} icon={faLinkedin} /></a>
-                            <a href="https://github.com/jwinnfeild2517"><FontAwesomeIcon {...classes('social-icons git')} icon={faGitSquare}/></a>
+                            <a data-testid="linkedIn-link" href="https://www.linkedin.com/in/jenner-thomas"><FontAwesomeIcon {...classes('social-icons linkedin')} icon={faLinkedin} /></a>
+                            <a data-testid="gitHub-link" href="https://github.com/jwinnfeild2517"><FontAwesomeIcon {...classes('social-icons git')} icon={faGitSquare}/></a>
                         </div>
                     </div>
                 </div>

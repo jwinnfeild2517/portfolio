@@ -22,7 +22,7 @@ const Navigation = () => {
                 <button className="menu-trigger fas fa-bars" onClick={handleClick}></button>
             </div>
             <div {...classes('menu-overlay')} style={overlayPosition}>
-                <button className="menu-trigger fas fa-times" onClick={handleClick}>
+                <button data-testid="nav-button" className="menu-trigger fas fa-times" onClick={handleClick}>
 
                 </button>
                 <ul {...classes('menu-items')}>

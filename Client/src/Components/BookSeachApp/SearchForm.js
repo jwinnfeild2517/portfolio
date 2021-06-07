@@ -29,7 +29,7 @@ const SearchForm = (props) => {
           className="searchField"
           placeholder="Enter book name"
         />
-        <button type="submit" className="mainPageButton">Submit</button>
+        <button type="submit" className="searchBookButton">Submit</button>
       </div>
     </form>
   );

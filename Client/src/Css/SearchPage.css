@@ -46,13 +46,20 @@
     font-size: 16px;
 }
 
-.textInput > .mainPageButton {
-    height: 3em;
+.searchBookButton {
+    height: 3.7em;
     width: 8em;
     background-color: #1595EC;
     border: none;
-    color: #ffffff;
+    color: white;
+    cursor: pointer;
 }
+
+.searchBookButton:hover {
+    background-color: #1077bd;
+}
+
+
 
 .searchBookForm > label {
     font-size: 2em;

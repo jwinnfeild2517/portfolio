@@ -32,7 +32,7 @@ export default class Weather extends React.Component {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${API_KEY}`
         const response = await fetch(url)
         const result = await response.json()
-        if (result.cod === "404") {
+        if (result.code === "404") {
             this.setState({
                 isLoaded: false,
                 error: 'City Not Found'
