@@ -30,7 +30,7 @@
     box-shadow: -2px 9px 21px 4px rgba(0,0,0,0.10);
     border-radius: 5px;
     animation-name: loadsearch;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
 }
 
 
@@ -178,46 +178,6 @@
 
 .bookTile .book-image:hover {
     cursor: pointer;
-}
-
-.showCard {
-    height: 18em;
-    width: 15em;
-    position: absolute;
-    right: 5em;
-    top: 25%;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: -2px 9px 21px 4px rgba(0,0,0,0.10);
-    overflow: hidden;
-}
-
-.showCard.right-card {
-    animation-name: showCardDropRight;
-    animation-duration: 3s;
-}
-
-.showCard.left-card {
-    animation-name: showCardDropLeft;
-    animation-duration: 3s;
-}
-
-.showCard > img {
-    width: 15em;
-}
-
-.showCard > .show_description {
-    padding: 1em;
-}
-
-@keyframes showCardDropRight {
-    from {top: 0}
-    to {top: 25%}
-}
-
-@keyframes showCardDropLeft {
-    from {top: 0}
-    to {top: 50%}
 }
 
 

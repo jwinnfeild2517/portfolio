@@ -1,6 +1,6 @@
 .landingPage {
     height: 90vh;
-    background-color: #1D1D1D;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +18,7 @@
     min-height: 275px;
     min-width: 475px;
     border-radius: 5px;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000;
-    box-shadow: 5px 5px 15px 5px #000000;
+    border: 1px solid;
     padding: 12px;
     margin: 12px;
 }
@@ -104,6 +103,14 @@
 
 @media screen and (max-width: 479px) {
   /* start of phone styles */
+
+  .landingPage {
+      align-items: flex-start;
+  }
+
+  .landingPage__cards {
+    margin-top: 1em;
+  }
 
     .landingPage__projects-link, .landingPage__contact-card {
         min-width: 290px;
