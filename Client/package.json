@@ -15,6 +15,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "dark-sky-api": "^0.6.32",
+    "jest-fetch-mock": "^3.0.3",
     "jquery": "^3.5.1",
     "randomcolor": "^0.6.2",
     "react": "^17.0.1",
@@ -24,6 +25,7 @@
     "react-scripts": "4.0.2",
     "react-slick": "^0.28.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

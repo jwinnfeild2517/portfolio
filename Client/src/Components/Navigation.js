@@ -19,18 +19,18 @@ const Navigation = () => {
                     <p>J E N N E R</p>
                     <p>T H O M A S</p>
                 </div>
-                <button className="menu-trigger fas fa-bars" onClick={handleClick}></button>
+                <button data-testid="nav-button" className="menu-trigger fas fa-bars" onClick={handleClick}></button>
             </div>
             <div {...classes('menu-overlay')} style={overlayPosition}>
-                <button data-testid="nav-button" className="menu-trigger fas fa-times" onClick={handleClick}>
+                <button data-testid="nav-button2" className="menu-trigger fas fa-times" onClick={handleClick}>
 
                 </button>
                 <ul {...classes('menu-items')}>
                     <li {...classes('menu-link')}>
                         <Link to="/" onClick={handleClick}>Home</Link>
                     </li>
-                    <li {...classes('menu-link')}><Link to="projects" onClick={handleClick}>Projects</Link></li>
-                    <li {...classes('menu-link')}><Link to="about" onClick={handleClick}>About</Link></li>
+                    <li {...classes('menu-link')}><Link to="/projects" onClick={handleClick}>Projects</Link></li>
+                    <li {...classes('menu-link')}><Link to="/about" onClick={handleClick}>About</Link></li>
                 </ul>
             </div>
         </React.Fragment>

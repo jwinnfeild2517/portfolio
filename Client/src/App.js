@@ -1,5 +1,5 @@
 // import MainPage from "./Containers/MainPage";
-import SearchContainer from "./Components/BookSeachApp/SearchContainer";
+import SearchFormContainer from "./Components/BookSeachApp/SearchFormContainer";
 import LandingPage from "./Components/LandingPage";
 import ProjectsBrowse from "./Components/ProjectsGrid/ProjectsBrowse"
 import Navigation from "./Components/Navigation";
@@ -15,9 +15,10 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/projects" component={ProjectsBrowse} />
-          <Route exact path="/search" component={SearchContainer} />
+          <Route path="/search" component={SearchFormContainer} />
           <Route exact path="/collage" component={MagazineCutout} />
           <Route exact path="/about" component={About} />
+          {/* <Route path="/results" render={ () => <About/>} /> */}
         </Switch>
       </Router>
     </div>
