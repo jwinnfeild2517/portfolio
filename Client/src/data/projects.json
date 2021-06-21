@@ -10,28 +10,28 @@
     "name": "Invoice Tracker",
     "link": "https://github.com/jwinnfeild2517/invoice-tracker",
     "description": "Invoice Tracking Dashboard for small businesses",
-    "image": "",
+    "image": "https://images.pexels.com/photos/5554663/pexels-photo-5554663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "external_link": true
   },
   {
     "name": "Project Suggestions",
     "link": "https://project-suggest.herokuapp.com/",
     "description": "Tracks a list of user submitted projects that can be voted on",
-    "image": "projectsuggestions",
+    "image": "https://images.pexels.com/photos/5554754/pexels-photo-5554754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "external_link": true
   },
   {
     "name": "Bitcoin Price",
     "link": "https://github.com/jwinnfeild2517/bitcoin-price-notifier",
     "description": "Allows the user to receive the current bitcoin price as a notification to their iphone",
-    "image": "",
+    "image": "https://images.pexels.com/photos/1161547/pexels-photo-1161547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "external_link": true
   },
   {
     "name": "Hogwarts Directory",
     "link": "https://hogwarts-directory.herokuapp.com/",
     "description": "Provides a directory for Hogwarts school of wizardry",
-    "image": "",
+    "image": "https://images.pexels.com/photos/4226799/pexels-photo-4226799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "external_link": true
   }
 ]

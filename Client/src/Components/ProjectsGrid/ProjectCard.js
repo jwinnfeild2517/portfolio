@@ -6,8 +6,8 @@ const projectCard = (props) => {
   // import imageName from '../Assets/images/IMG_2426.jpg'
   if (props.external_link === true) {
     return(
-      <a href={props.link} className="projects__items projects__grid-item" style={{backgroundColor: color}}>
-        {/* <img src={`/images/${props.image}.jpeg`} alt="project item"></img> */}
+      <a href={props.link} className="projects__items projects__grid-item" target="_blank" style={{backgroundColor: color}}>
+        <img src={props.image} alt="project item"></img>
         <h3 className="projects__grid-item-name">{props.name}</h3>
         <p className="project__grid-description">{props.description}</p>
       </a>
