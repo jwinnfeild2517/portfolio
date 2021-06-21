@@ -9,6 +9,7 @@ const projectCard = (props) => {
       <a href={props.link} className="projects__items projects__grid-item" style={{backgroundColor: color}}>
         {/* <img src={`/images/${props.image}.jpeg`} alt="project item"></img> */}
         <h3 className="projects__grid-item-name">{props.name}</h3>
+        <p className="project__grid-description">{props.description}</p>
       </a>
     )
   }else {
@@ -16,6 +17,7 @@ const projectCard = (props) => {
       <Link to={props.link} className="projects__items projects__grid-item" style={{backgroundColor: color}}>
         <img src={`/images/${props.image}.jpeg`} alt="project item"></img>
         <h3 className="projects__grid-item-name">{props.name}</h3>
+        <p className="project__grid-description">{props.description}</p>
       </Link>
     )
   }

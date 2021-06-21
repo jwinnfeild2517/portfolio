@@ -11,6 +11,7 @@ const ProjectsBrowse = () => (
                 name={project.name}
                 link={project.link}
                 image={project.image}
+                description={project.description}
                 external_link={project.external_link}
                 />
             )

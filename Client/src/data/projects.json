@@ -2,30 +2,35 @@
   {
     "name": "Book Search",
     "link": "search",
+    "description": " A Book Search engine Powered by the Google Books API",
     "image": "booksearch",
     "external_link": false
   },
   {
-    "name": "Digital Collage",
-    "link": "collage",
-    "image": "digitalcollage",
-    "external_link": false
+    "name": "Invoice Tracker",
+    "link": "https://github.com/jwinnfeild2517/invoice-tracker",
+    "description": "Invoice Tracking Dashboard for small businesses",
+    "image": "",
+    "external_link": true
   },
   {
     "name": "Project Suggestions",
     "link": "https://project-suggest.herokuapp.com/",
+    "description": "Tracks a list of user submitted projects that can be voted on",
     "image": "projectsuggestions",
     "external_link": true
   },
   {
     "name": "Bitcoin Price",
     "link": "https://github.com/jwinnfeild2517/bitcoin-price-notifier",
+    "description": "Allows the user to receive the current bitcoin price as a notification to their iphone",
     "image": "",
     "external_link": true
   },
   {
     "name": "Hogwarts Directory",
     "link": "https://hogwarts-directory.herokuapp.com/",
+    "description": "Provides a directory for Hogwarts school of wizardry",
     "image": "",
     "external_link": true
   }

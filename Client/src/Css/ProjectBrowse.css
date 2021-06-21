@@ -53,10 +53,22 @@ a:hover {
   position: absolute;
   font-size: 3em;
   color: white;
-  bottom: 0;
-  left: 10px;
+  left: 0;
+  top: 0;
   background-color: #00000047;
   padding: 10px;
+}
+
+.project__grid-description {
+  position: absolute;
+  font-size: 1.5em;
+  color: white;
+  background-color: #00000047;
+  padding: 10px;
+  width: 50%;
+  right: 0;
+  top: 40%;
+  line-height: 1.5em;
 }
 
 
