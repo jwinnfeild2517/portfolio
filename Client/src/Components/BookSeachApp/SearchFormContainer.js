@@ -34,7 +34,7 @@ const SearchContainer = () => {
   return (
     <div className="SearchContainer">
         <form className="searchBookForm" onSubmit={handleSubmit}>
-          <label>
+          <label for="Book search Field">
             <h1>What do you<br></br><span>want to read?</span></h1>
           </label>
           <br />
@@ -42,14 +42,15 @@ const SearchContainer = () => {
             <input
               type="text"
               onChange={(e) => setSearchQuery(e.target.value)}
-              id="searchField"
+              id="Book search Field"
               name="userSearch"
               className="searchField"
               placeholder="Enter book or Author"
+              aria-describedby="un-error"
             />
             <button data-testid="loading" type="submit" className="searchBookButton">Search</button>
           </div>
-          <p style={{ color: 'white', fontSize: '1.2em', backgroundColor: 'red'}}>{error}</p>
+          <p id="un-error" style={{ color: 'white', fontSize: '1.2em', backgroundColor: 'red'}}>{error}</p>
       </form>
       <Route path="/search/results" render={ () => <ResultsContainer data={bookData} />} />
     </div>

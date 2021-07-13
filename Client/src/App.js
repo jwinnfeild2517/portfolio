@@ -3,7 +3,6 @@ import SearchFormContainer from "./Components/BookSeachApp/SearchFormContainer";
 import LandingPage from "./Components/LandingPage";
 import ProjectsBrowse from "./Components/ProjectsGrid/ProjectsBrowse"
 import Navigation from "./Components/Navigation";
-import MagazineCutout from "./Components/MagazineCutout"
 import About from "./Components/AboutPage"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -16,9 +15,7 @@ function App() {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/projects" component={ProjectsBrowse} />
           <Route path="/search" component={SearchFormContainer} />
-          <Route exact path="/collage" component={MagazineCutout} />
           <Route exact path="/about" component={About} />
-          {/* <Route path="/results" render={ () => <About/>} /> */}
         </Switch>
       </Router>
     </div>

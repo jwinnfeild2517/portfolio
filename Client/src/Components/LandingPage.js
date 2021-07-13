@@ -13,7 +13,7 @@ const LandingPage = () => {
     return(
         <div {...classes()}>
             <div {...classes('cards')}>
-                <Link data-testid="projectsBrowseLink-card" to="projects" {...classes('projects-link')} style={{backgroundColor: cardColor}}>
+                <Link aria-label="navigate to projects browse page" data-testid="projectsBrowseLink-card" to="projects" {...classes('projects-link')} style={{backgroundColor: cardColor}}>
                         <p {...classes('content-header')}>
                             Projects
                         </p>
@@ -29,8 +29,8 @@ const LandingPage = () => {
                     <div {...classes('contact-info')}>
                         <p {...classes('contact-content')}>jenner.e.thomas@gmail.com</p>
                         <div {...classes('socials')}>
-                            <a data-testid="linkedIn-link" href="https://www.linkedin.com/in/jenner-thomas"><FontAwesomeIcon {...classes('social-icons linkedin')} icon={faLinkedin} /></a>
-                            <a data-testid="gitHub-link" href="https://github.com/jwinnfeild2517"><FontAwesomeIcon {...classes('social-icons git')} icon={faGitSquare}/></a>
+                            <a data-testid="linkedIn-link" href="https://www.linkedin.com/in/jenner-thomas" aria-label="navigate to my linked in page"><FontAwesomeIcon {...classes('social-icons linkedin')} icon={faLinkedin} /></a>
+                            <a data-testid="gitHub-link" href="https://github.com/jwinnfeild2517" aria-label="navigate to my git hub page"><FontAwesomeIcon {...classes('social-icons git')} icon={faGitSquare}/></a>
                         </div>
                     </div>
                 </div>

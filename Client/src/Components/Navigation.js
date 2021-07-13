@@ -10,7 +10,7 @@ const Navigation = () => {
     // change navigation state
     const handleClick = () => setIsOpen(!isOpen)
     // change the menu top position property based on state
-    const overlayPosition = isOpen ? {top: '0'} : {top: '-100em'}
+    const overlayPosition = isOpen ? {top: '0', display:'flex'} : {top: '-100em', display: 'none'}
     return(
         // allows to generate elements without wrapping them in a container first
         <React.Fragment>
@@ -19,7 +19,7 @@ const Navigation = () => {
                     <p>J E N N E R</p>
                     <p>T H O M A S</p>
                 </div>
-                <button data-testid="nav-button" className="menu-trigger fas fa-bars" onClick={handleClick}></button>
+                <button data-testid="nav-button" aria-expanded={isOpen} className="menu-trigger fas fa-bars" onClick={handleClick}></button>
             </div>
             <div {...classes('menu-overlay')} style={overlayPosition}>
                 <button data-testid="nav-button2" className="menu-trigger fas fa-times" onClick={handleClick}>
@@ -27,7 +27,7 @@ const Navigation = () => {
                 </button>
                 <ul {...classes('menu-items')}>
                     <li {...classes('menu-link')}>
-                        <Link to="/" onClick={handleClick}>Home</Link>
+                        <Link to="/"  arials-expanded={isOpen} onClick={handleClick}>Home</Link>
                     </li>
                     <li {...classes('menu-link')}><Link to="/projects" onClick={handleClick}>Projects</Link></li>
                     <li {...classes('menu-link')}><Link to="/about" onClick={handleClick}>About</Link></li>

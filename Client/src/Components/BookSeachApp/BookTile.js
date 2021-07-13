@@ -6,20 +6,18 @@ const BookTile = (props) => {
     // change navigation state
     const handleClick = () => setIsOpen(!isOpen)
     // change the menu top position property based on state
-    const infoPosition = isOpen ? {left: '0'} : {left: '-25em'}
+    const infoPosition = isOpen ? {left: '0', display: 'flex'} : {left: '-25em', display: 'none'}
   return (
     <div className="bookTile">
-      <button onClick={handleClick} className="book-image"><img src={props.image} alt="book" className="book-image" /></button>
+      <img src={props.image} alt="" className="book-image"/>
+      <button aria-expanded={isOpen} onClick={handleClick} className="fas fa-angle-double-right book-detail-toggle"></button>
       <div className="info" style={infoPosition}>
         <p><strong>Title: </strong>{props.title}</p>
         <p><strong>Author(s): </strong>{props.author}</p>
         <p><strong>Category: </strong>{props.category}</p>
         <p><strong>Publised: </strong>{props.publishedDate}</p>
-        {/* <p>{props.description}</p> */}
-        <div className="info-icons">
-          <a href={props.link} target="_blank" rel="noreferrer" className="fas fa-info-circle icons"></a>
-          <button onClick={handleClick} className="fas fa-arrow-alt-circle-left icons"></button>
-        </div>
+        <a href={props.link} className="book-google-link" target="_blank" rel="noreferrer" aria-label={`${props.title}'s google link`}>See More</a>
+        <button aria-expanded={isOpen} onClick={handleClick} className="fas fa-angle-double-left book-detail-toggle"></button>
       </div>
     </div>
   );
