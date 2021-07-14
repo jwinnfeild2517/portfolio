@@ -27,10 +27,10 @@ const Navigation = () => {
                 </button>
                 <ul {...classes('menu-items')}>
                     <li {...classes('menu-link')}>
-                        <Link to="/"  arials-expanded={isOpen} onClick={handleClick}>Home</Link>
+                        <Link to="/"  aria-label='homepage nav link' onClick={handleClick}>Home</Link>
                     </li>
-                    <li {...classes('menu-link')}><Link to="/projects" onClick={handleClick}>Projects</Link></li>
-                    <li {...classes('menu-link')}><Link to="/about" onClick={handleClick}>About</Link></li>
+                    <li {...classes('menu-link')}><Link aria-label='projects page nav link' to="/projects" onClick={handleClick}>Projects</Link></li>
+                    <li {...classes('menu-link')}><Link aria-label='about page nav link' to="/about" onClick={handleClick}>About</Link></li>
                 </ul>
             </div>
         </React.Fragment>

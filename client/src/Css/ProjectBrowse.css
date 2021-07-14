@@ -5,26 +5,22 @@ a:hover {
 
 .projects {
   background-color: white;
-  width: 95%;
+  width: 70%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   grid-auto-rows: min-content;
   grid-auto-columns: min-content;
   margin-top: 5em;
-
 }
 
 .projects__items {
-  height: 500px;
-  background-color: white;
+  height: 250px;
+  background-color: #f5f5f5;
   position: relative;
-}
-
-.projects__items:hover {
-  box-shadow: 0px 0px 5px 3px #000000b3;
+  border-radius: 10px;
 }
 
 .projects__items > img {
@@ -51,12 +47,14 @@ a:hover {
 
 .projects__grid-item-name {
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   color: white;
   left: 0;
   top: 0;
   background-color: #00000065;
   padding: 10px;
+  box-shadow: 4px 13px 5px 0px #00000065;
+  border-top: 3px solid white;
 }
 
 .project__grid-description {
@@ -69,8 +67,25 @@ a:hover {
   right: 0;
   top: 40%;
   line-height: 1.5em;
+  box-shadow: -6px 8px 7px 0px #926d6dad;
 }
 
+.project-link {
+  color: white;
+  font-size: 1.5em;
+  bottom: 50px;
+  position: absolute;
+  border-bottom: 2px solid tomato;
+  background-color: #00000065;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  box-shadow: 4px 13px 5px 0px #00000065;
+  background-color: tomato;
+}
 
 .projects__items.item-1 {
   background-color: #CBD7E3;
