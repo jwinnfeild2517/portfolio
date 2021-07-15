@@ -12,7 +12,7 @@
     "start": "nodemon server.js",
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' -c 'blue,green' \"nodemon server.js\" \"npm run client\"",
-    "build": "cd Client && npm run build",
+    "build": "cd client && npm run build",
     "install-client": "cd Client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build"
   },
